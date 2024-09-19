@@ -1,6 +1,6 @@
 // add money to the account
 // step-1 add an event handler to the add money button inside the from
-document.getElementById('btn-add-money').addEventListener('click', function(event){
+document.getElementById('btn-add-money').addEventListener('click', function (event) {
     //   prevent page reload after submit
     event.preventDefault();
     //step-2 get money to be added to the account
@@ -12,7 +12,7 @@ document.getElementById('btn-add-money').addEventListener('click', function(even
     console.log(pinNumberInput);
 
     // step-3 verify the pin number(wrong way not right way to validate)
-    if(pinNumberInput === '1234'){
+    if (pinNumberInput === '1234') {
         console.log('adding money to your account');
         //step-4 get the current balance
         const balance = document.getElementById('account-balance').innerText;
@@ -24,13 +24,13 @@ document.getElementById('btn-add-money').addEventListener('click', function(even
         const newBalance = addMoneyNumber + balanceNumber;
         console.log(newBalance);
 
-        // update the balance in the ui/dom
+        //step-6 update the balance in the ui/dom
         document.getElementById('account-balance').innerText = newBalance;
 
     }
-    else{
+    else {
         alert('failed to add money ! please try again')
 
-}
-   
+    }
+
 });
